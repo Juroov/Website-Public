@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    box-sizing: content-box;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    margin: 0;
+}
+
+.navbar__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logo {
+    color:aliceblue;
+    text-align: left;
+    padding: 0 3rem;
+}
+
+.navbar__wrapper ul {
+    list-style-type: none;
+
+}
+
+.navbar__items {
+    color: aqua;
+    display: inline-block;
+    text-align: right;
+    padding: 0.5rem 3rem;
+}
+ul{
+    color:rgb(8, 4, 132);
+    
+}
+
+ul li{
+    color: aqua;
+}
+.navbar__items li {
+    display: inline-block;
+    padding: 0 1rem;
+    color: rgb(44, 117, 181);
+    text-decoration: none;
+}
+

@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap);
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+.main{
+    margin:auto;
+    background:linear-gradient(to bottom,#0E0E10,#21325E,#0E0E10,#0a668526);
+    background-position: center;
+    background-size: cover;
+    height: 190vh;
+
+    
+    
+    
+}
+.title span{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 40px;
+    color: #F6A97A;
+   
+}
+.title h1{
+    font-family: 'Chakra Petch', sans-serif;
+    padding-top: 100px;
+    text-align: center;
+
+    color:white;
+}
+.title p{
+    font-family: 'Chakra Petch', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    margin:auto;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    color:white;
+
+}
