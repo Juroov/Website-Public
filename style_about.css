@@ -36,7 +36,23 @@
     text-align: center;
     margin:auto;
     letter-spacing: 1.5px;
-    line-height: 20px;
+    line-height: 50px;
+
     color:white;
 
+}
+.spanz h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 40px;
+
+    color: #21325E;
+    padding-top: 20px;
+    text-align: center;
+    
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 100px;
+    
+    
 }
