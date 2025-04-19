@@ -1,40 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="style_about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style_about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 100%;
+      padding: 50px 30px;
+      box-sizing: border-box;
+    }
+
+    .title h1,
+    .spanz h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .spanz h1 {
+      margin-top: 60px;
+      color: #F6A97A    ;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    span {
+      color: #EA4F88;
+    }
+  </style>
 </head>
 <body>
-    <div class="main">
-        <div class="title">
-            <h1>About <span>Collectifun</span> Factory</h1>  
-            <p>At CollectiFun Factory, we don’t just sell diecast toy cars, we celebrate the passion behind collecting them. <br>
-                 From Hot Wheels to Kaido House, Tomica to MiniGT, and everything in between, we’re here to fuel <br>
-                 your collection with quality finds, rare gems, and community-driven service.Founded by collectors, for collectors, <br>
-                 our goal is to create a trusted and fun space where fellow enthusiasts can discover, reserve, bid, and safely shop for <br>
-                 the cars they love. Whether you're a serious collector hunting grails or just starting out, we treat every transaction <br>
-                 with care and transparency.
-                </p>
-            <h1>What Sets Us Apart?</h1>
-            <p>- Authentic, on-hand stock posted with actual item photos <br>
-                -  Safekeeping options
-                </p>
-            <p>We're proudly based in Bustos & Malolos, Bulacan. <br>
-                We believe every collector deserves a smooth, honest, and exciting buying experience. <br>
-                 So welcome to the Factory, where collecting is fun and every piece tells a story. <br>
-                <br>
-                <br> 
-                <br>
-                
-                </p>
-                
-        </div>
-        <div class="spanz">
-            <h1 >Collect. Connect. Have Fun, Only at CollectiFun Factory.</h1>
-        </div>
-           
+  <div class="main">
+    <div class="title fade-in">
+      <h1>About <span>Collectifun</span> Factory</h1>
+      <p>
+        At CollectiFun Factory, we don’t just sell diecast toy cars, we celebrate the passion behind collecting them. <br />
+        From Hot Wheels to Kaido House, Tomica to MiniGT, and everything in between, we’re here to fuel <br />
+        your collection with quality finds, rare gems, and community-driven service. Founded by collectors, for collectors, <br />
+        our goal is to create a trusted and fun space where fellow enthusiasts can discover, reserve, bid, and safely shop for <br />
+        the cars they love. Whether you're a serious collector hunting grails or just starting out, we treat every transaction <br />
+        with care and transparency.
+      </p>
+      <h1>What Sets Us Apart?</h1>
+      <p>
+        - Authentic, on-hand stock posted with actual item photos <br />
+        - Safekeeping options
+      </p>
+      <p>
+        We're proudly based in Bustos & Malolos, Bulacan. <br />
+        We believe every collector deserves a smooth, honest, and exciting buying experience. <br />
+        So welcome to the Factory, where collecting is fun and every piece tells a story.
+      </p>
     </div>
+    <div class="spanz fade-in">
+      <h1>Collect. Connect. Have Fun, Only at CollectiFun Factory.</h1>
+    </div>
+  </div>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const showOnScroll = () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', showOnScroll);
+    window.addEventListener('load', showOnScroll);
+  </script>
 </body>
 </html>

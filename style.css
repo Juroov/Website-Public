@@ -224,7 +224,7 @@
         line-height: 20px;
     }
     .best{
-        width: 1200px;
+        width: 1300px;
         font-family: 'Chakra Petch', sans-serif;
         font-size: 30px;
         height: auto;
@@ -271,16 +271,21 @@
 
 
 
-    \* Slider Styles */
+   /* Slider Styles */
+   .best {
+    text-align: center;
+    color: white;
+    padding: 40px 0;
+}
 
 .slider-container {
     position: relative;
-    width: 90%;
-    max-width: 300px;    
-    margin: 30px auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
     overflow: hidden;
-    border-radius: 12px;
-    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
 }
 
 .slider {
@@ -288,30 +293,34 @@
     transition: transform 0.4s ease-in-out;
     gap: 20px;
     align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
 
 .slider img {
-    width: 300px;
-    height: 200px;
-    position: relative;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 12px;    
+    border-radius: 12px;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .slider-btn {
     position: absolute;
-    top: 65%;
-    
+    top: 50%;
     transform: translateY(-50%);
-    background:transparent  ;
+    background: transparent;
     color: #4B2991;
     border: none;
     font-size: 2rem;
-    padding: 8px 14px;
-    cursor: pointer;    
-    
+    padding: 10px 16px;
+    cursor: pointer;
     z-index: 10;
     transition: 0.3s ease;
 }
@@ -319,12 +328,13 @@
 .slider-btn:hover {
     background: #EA4F88;
     color: white;
+    border-radius: 50%;
 }
 
 .slider-btn.prev {
-    left: 10px;
+    left: 0;
 }
 
 .slider-btn.next {
-    right: 10px;
+    right: 0;
 }
