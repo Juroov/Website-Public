@@ -224,15 +224,15 @@
         line-height: 20px;
     }
     .best{
-        width: 1300px;
+        width: 1200px;
         font-family: 'Chakra Petch', sans-serif;
         font-size: 30px;
         height: auto;
         margin: auto;
         position: relative;
         color: #ffffff;
-        padding: 0 20px;
-        padding-bottom: 400px;
+        padding: 50px;
+        padding-bottom: 250px;
     }
     
     .contacts{
@@ -272,30 +272,39 @@
 
 
    /* Slider Styles */
-   .best {
-    text-align: center;
-    color: white;
-    padding: 40px 0;
-}
+   
 
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    padding-top: 100px;
+    
+    max-width: 900px;
     margin: auto;
     overflow: hidden;
     padding: 0 60px;
     box-sizing: border-box;
+   
+    
 }
 
 .slider {
     display: flex;
+    
     transition: transform 0.4s ease-in-out;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: transparent;
+    
+
+    height:200px;
 }
 
 .slider::-webkit-scrollbar {
@@ -303,12 +312,19 @@
 }
 
 .slider img {
+    
     width: 220px;
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+    transition: fade 0.3s ease-in-out;
+    background:transparent;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .slider-btn {
@@ -316,7 +332,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: #4B2991;
+    color: #F6A97A;
     border: none;
     font-size: 2rem;
     padding: 10px 16px;
@@ -328,7 +344,7 @@
 .slider-btn:hover {
     background: #EA4F88;
     color: white;
-    border-radius: 50%;
+   
 }
 
 .slider-btn.prev {
@@ -337,4 +353,36 @@
 
 .slider-btn.next {
     right: 0;
+}
+.image-fade-wrapper {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* The actual fading corners */
+.image-fade-wrapper::before,
+.image-fade-wrapper::after {
+    content: "";
+    position: absolute;
+    
+    
+    width: 60px;
+    height: 200px;    ;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.image-fade-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.image-fade-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
 }
