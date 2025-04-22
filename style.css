@@ -361,28 +361,85 @@
 }
 
 /* The actual fading corners */
-.image-fade-wrapper::before,
-.image-fade-wrapper::after {
-    content: "";
+
+/* Best seller section*/
+.popular__categories {
+    background: transparent;
+    border-radius:20px;
+    padding:10 10px ;
+    position: relative;
+  }
+  
+  .section__title {
+    font-size: 50px;
+    font-family: 'chakra Petch', sans-serif;
+    color: #F6A97A;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .section__title span {
+    color: #f2f2f2;
+  }
+  
+  .categories__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 3fr));
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  .category__card {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    min-width: 160px;
+  }
+  
+  .category__card img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .category__card h3 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .category__card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .slider__controls {
     position: absolute;
-    
-    
-    width: 60px;
-    height: 200px;    ;
-    z-index: 5;
-    pointer-events: none;
-}
-
-.image-fade-wrapper::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.image-fade-wrapper::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
-}
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .slider__btn {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #000;
+    transition: background 0.3s ease;
+  }
+  
+  .slider__btn:hover {
+    background: var(--accent-purple);
+    color: var(--primary-color);
+  }
+  
