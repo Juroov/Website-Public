@@ -249,6 +249,7 @@
       
       .contacts__wrapper {
         display: flex;
+        background:linear-gradient(to top,rgba(0, 0, 0, 0.5)25%,rgba(0, 0, 0, 0.5)25%);
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
